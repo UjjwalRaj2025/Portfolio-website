@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #111;
+  color: #fff;
+  line-height: 1.6;
+  background-image: linear-gradient(#111, #1a1a1a);
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  padding: 100px 0 20px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.title span {
+  color: orange;
+}
+
+.subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- INTRO SECTION ---------- */
+.intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  width: 90%;
+}
+
+.photo-section {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.profile-photo {
+  width: 250px;
+  border-radius: 10px;
+  border: 4px solid #c25757;
+  box-shadow: 0 0 20px rgba(30, 192, 24, 0.4);
+}
+
+
+
+.sticker {
+  position: absolute;
+  width: 45px;
+}
+
+.alien {
+  top: 10px;
+  right: -30px;
+}
+
+.smiley {
+  bottom: -25px;
+  left: 10px;
+}
+
+.about {
+  max-width: 420px;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.about p {
+  color: #ddd;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.contact {
+  margin-top: 20px;
+}
+
+.contact h3 {
+  color: orange;
+  margin-bottom: 5px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffa500;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* ---------- DETAILS SECTION ---------- */
+.details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 40px auto;
+  width: 90%;
+}
+
+.details h2 {
+  color: orange;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.education, .experience {
+  max-width: 400px;
+}
+
+.education p, .experience p, .experience h3 {
+  color: #ddd;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  padding: 40px 0;
+  border-top: 1px solid #222;
+}
+
+/* ---------- SCROLL ANIMATION ---------- */
+section, .about {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+section.visible, .about.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about {
+    text-align: center;
+  }
+  .details {
+    flex-direction: column;
+    align-items: center;
+  }
+}
